@@ -1,0 +1,152 @@
+data_mixins:
+    us_state:
+        class: USStateMixin
+        fields:
+            us_state:
+                type: "@django.ForeignKey"
+                relation: us_state
+                options:
+                    "null": true
+                    on_delete: "@django.PROTECT"
+                    editable: false
+
+    us_county:
+        class: USCountyMixin
+        fields:
+            us_county:
+                type: "@django.ForeignKey"
+                relation: us_county
+                options:
+                    "null": true
+                    on_delete: "@django.PROTECT"
+                    editable: false
+
+    code:
+        class: CodeMixin
+        fields:
+            code:
+                type: "@django.CharField"
+                options:
+                    "null": true
+                    max_length: 256
+
+    full_name:
+        class: FullNameMixin
+        fields:
+            full_name:
+                type: "@django.CharField"
+                options:
+                    "null": true
+                    max_length: 256
+
+    date:
+        class: DateMixin
+        fields:
+            date:
+                type: "@django.DateField"
+                options:
+                    "null": true
+
+    cases_summary:
+        class: CasesSummaryMixin
+        fields:
+            cases:
+                type: "@django.IntegerField"
+                options:
+                    "null": true
+            deaths:
+                type: "@django.IntegerField"
+                options:
+                    "null": true
+
+    cases:
+        class: CasesMixin
+        fields:
+            positive:
+                type: "@django.IntegerField"
+                options:
+                    "null": true
+            negative:
+                type: "@django.IntegerField"
+                options:
+                    "null": true
+            pending:
+                type: "@django.IntegerField"
+                options:
+                    "null": true
+            recovered:
+                type: "@django.IntegerField"
+                options:
+                    "null": true
+            deaths:
+                type: "@django.IntegerField"
+                options:
+                    "null": true
+            hospitalized:
+                type: "@django.IntegerField"
+                options:
+                    "null": true
+
+    hospitalizations:
+        class: HospitalizationsMixin
+        fields:
+            hospitalized_currently:
+                type: "@django.IntegerField"
+                options:
+                    "null": true
+            hospitalized_cumulative:
+                type: "@django.IntegerField"
+                options:
+                    "null": true
+            icu_currently:
+                type: "@django.IntegerField"
+                options:
+                    "null": true
+            icu_cumulative:
+                type: "@django.IntegerField"
+                options:
+                    "null": true
+            ventilator_currently:
+                type: "@django.IntegerField"
+                options:
+                    "null": true
+            ventilator_cumulative:
+                type: "@django.IntegerField"
+                options:
+                    "null": true
+
+    testing:
+        class: TestingMixin
+        fields:
+            total_test_results:
+                type: "@django.IntegerField"
+                options:
+                    "null": true
+
+    testing_detail:
+        class: TestingDetailMixin
+        fields:
+            total_tests_viral:
+                type: "@django.IntegerField"
+                options:
+                    "null": true
+            positive_tests_viral:
+                type: "@django.IntegerField"
+                options:
+                    "null": true
+            negative_tests_viral:
+                type: "@django.IntegerField"
+                options:
+                    "null": true
+            positive_cases_viral:
+                type: "@django.IntegerField"
+                options:
+                    "null": true
+            death_confirmed:
+                type: "@django.IntegerField"
+                options:
+                    "null": true
+            death_probable:
+                type: "@django.IntegerField"
+                options:
+                    "null": true

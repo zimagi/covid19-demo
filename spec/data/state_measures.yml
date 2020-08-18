@@ -1,0 +1,8 @@
+data:
+    us_state_measures:
+        class: USStateMeasures
+        base: us_state
+        mixins: [date, cases, hospitalizations, testing, testing_detail]
+        roles:
+            edit: [covid19_admin]
+            view: [covid19_auditor]

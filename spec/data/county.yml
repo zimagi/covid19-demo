@@ -1,0 +1,8 @@
+data:
+    us_county:
+        class: USCounty
+        base: us_state
+        mixins: [full_name]
+        roles:
+            edit: [covid19_admin]
+            view: [covid19_auditor]

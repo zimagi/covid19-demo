@@ -1,0 +1,18 @@
+data_base:
+    us_state:
+        class: USStateBase
+        base: resource
+        mixins: [us_state]
+        id_fields: [us_state_id, name]
+        meta:
+            unique_together: [us_state, name]
+            scope: us_state
+
+    us_county:
+        class: USCountyBase
+        base: resource
+        mixins: [us_county]
+        id_fields: [us_county_id, name]
+        meta:
+            unique_together: [us_county, name]
+            scope: us_county
