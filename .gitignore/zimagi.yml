@@ -1,4 +1,0 @@
-name: covid19
-
-scripts: scripts/install.sh
-requirements: requirements.txt
