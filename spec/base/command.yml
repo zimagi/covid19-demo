@@ -5,6 +5,6 @@ command_base:
         groups_allowed: [covid19-admin]
 
     us_county:
-        mixins: [us_county_data]
+        mixins: [us_state_data, us_county_data]
         server_enabled: true
         groups_allowed: [covid19-admin]

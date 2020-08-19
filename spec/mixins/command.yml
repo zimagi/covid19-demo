@@ -11,8 +11,10 @@ command_mixins:
 
     us_county_data:
         class: USCountyDataMixin
-        mixins: [us_state_data]
         meta:
             us_county:
                 data: us_county
+                priority: 2
+            us_county_measures:
+                data: us_county_measures
                 priority: 2
