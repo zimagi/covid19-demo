@@ -21,19 +21,19 @@ data_mixins:
                     on_delete: "@django.PROTECT"
                     editable: false
 
-    code:
-        class: CodeMixin
+    fips:
+        class: FIPSMixin
         fields:
-            code:
+            fips:
                 type: "@django.CharField"
                 options:
                     "null": true
                     max_length: 256
 
-    full_name:
-        class: FullNameMixin
+    code:
+        class: CodeMixin
         fields:
-            full_name:
+            code:
                 type: "@django.CharField"
                 options:
                     "null": true

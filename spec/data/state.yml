@@ -2,7 +2,8 @@ data:
     us_state:
         class: USState
         base: environment
-        mixins: [code, full_name]
+        mixins: [fips, code]
+        id_fields: [fips]
         roles:
             edit: [covid19_admin]
             view: [covid19_auditor]
