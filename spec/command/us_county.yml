@@ -1,0 +1,7 @@
+command:
+    us:
+        county:
+            resource: us_county
+            base_name: us_county_data
+            base: us_county
+            priority: 30

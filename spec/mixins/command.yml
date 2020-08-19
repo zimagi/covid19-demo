@@ -1,0 +1,18 @@
+command_mixins:
+    us_state_data:
+        class: USStateDataMixin
+        meta:
+            us_state:
+                data: us_state
+                priority: 1
+            us_state_measures:
+                data: us_state_measures
+                priority: 2
+
+    us_county_data:
+        class: USCountyDataMixin
+        mixins: [us_state_data]
+        meta:
+            us_county:
+                data: us_county
+                priority: 2

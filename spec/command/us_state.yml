@@ -1,0 +1,13 @@
+command:
+    us:
+        state:
+            resource: us_state
+            base_name: us_state_data
+            base: us_state
+            priority: 20
+
+            measures:
+                resource: us_state_measures
+                base_name: us_state_data
+                base: us_state
+                priority: 60

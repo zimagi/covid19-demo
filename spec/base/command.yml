@@ -1,0 +1,10 @@
+command_base:
+    us_state:
+        mixins: [us_state_data]
+        server_enabled: true
+        groups_allowed: [covid19-admin]
+
+    us_county:
+        mixins: [us_county_data]
+        server_enabled: true
+        groups_allowed: [covid19-admin]
