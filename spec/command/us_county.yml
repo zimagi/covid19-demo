@@ -2,12 +2,12 @@ command:
     us:
         county:
             resource: us_county
-            base_name: us_county_data
+            base_name: us_county
             base: us_county
             priority: 30
 
             measures:
                 resource: us_county_measures
-                base_name: us_county_data
+                base_name: us_county_measures
                 base: us_county
                 priority: 60
