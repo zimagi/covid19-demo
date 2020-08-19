@@ -5,5 +5,5 @@ data:
         mixins: [fips]
         id_fields: [fips]
         roles:
-            edit: [covid19_admin]
-            view: [covid19_auditor]
+            edit: [covid19-admin]
+            view: [covid19-auditor]
