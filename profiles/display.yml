@@ -1,0 +1,25 @@
+config_store:
+    us_state_list_fields:
+        - fips
+        - code
+        - name
+    us_state_display_fields:
+        - id
+        - fips
+        - code
+        - name
+        - created
+        - updated
+        - uscounty_relation
+
+    us_county_list_fields:
+        - fips
+        - name
+        - us_state
+    us_county_display_fields:
+        - id
+        - fips
+        - name
+        - created
+        - updated
+        - us_state
