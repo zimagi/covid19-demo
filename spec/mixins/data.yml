@@ -25,10 +25,9 @@ data_mixins:
         class: FIPSMixin
         fields:
             fips:
-                type: "@django.CharField"
+                type: "@django.IntegerField"
                 options:
                     "null": true
-                    max_length: 256
 
     code:
         class: CodeMixin
