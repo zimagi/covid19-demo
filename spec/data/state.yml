@@ -4,6 +4,7 @@ data:
         base: environment
         mixins: [fips, code]
         id_fields: [fips]
+        key: fips
         roles:
             edit: [covid19-admin]
             view: [covid19-auditor]
