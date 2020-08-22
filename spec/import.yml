@@ -1,0 +1,59 @@
+import:
+    states:
+        source: csv_files
+        files:
+            Code: sources/us_states.csv
+            state: sources/us_states_covid19_daily.csv
+        data: us_state
+        required_fields: [name, code, fips]
+        map:
+            name: State
+            code: Code
+            fips: fips
+
+    counties:
+        source: csv_file
+        file: sources/us_counties_covid19_daily.csv
+        data: us_county
+        requires: states
+        required_fields: [name, fips, us_state_id]
+        relations:
+            us_state_id:
+                data: us_state
+                id: name
+                column: state
+        map:
+            name: county
+            fips: fips
+
+    # state_measures:
+    #     source: csv_file
+    #     file: sources/us_states_covid19_daily.csv
+    #     data: us_state_measures
+    #     requires: states
+    #     relations:
+    #         us_state_id:
+    #             data: us_state
+    #             id: fips
+    #             column: fips
+    #     map:
+    #         date: date
+    #         positive: positive
+    #         negative: negative
+    #         pending: pending
+    #         recovered: recovered
+    #         deaths: death
+    #         hospitalized: hospitalized
+    #         hospitalized_currently: hospitalizedCurrently
+    #         hospitalized_cumulative: hospitalizedCumulative
+    #         icu_currently: inIcuCurrently
+    #         icu_cumulative: inIcuCumulative
+    #         ventilator_currently: onVentilatorCurrently
+    #         ventilator_cumulative: onVentilatorCumulative
+    #         total_test_results: totalTestResults
+    #         total_tests_viral: totalTestsViral
+    #         positive_tests_viral: positiveTestsViral
+    #         negative_tests_viral: negativeTestsViral
+    #         positive_cases_viral: positiveCasesViral
+    #         death_confirmed: deathConfirmed
+    #         death_probable: deathProbable
