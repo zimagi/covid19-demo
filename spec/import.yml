@@ -206,3 +206,45 @@ import:
                         min: 0
                         nan: true
                 formatter: integer
+
+    county_measures:
+        source: csv_file
+        file: sources/us_counties_covid19_daily.csv
+        data: us_county_measures
+        requires: counties
+        relations:
+            us_county_id:
+                data: us_county
+                id: fips
+                column: fips
+                validators:
+                    number:
+                        min: 0
+        map:
+            name:
+                column: [fips, date]
+                formatter:
+                    provider: name_joiner
+                    date_format: "%Y-%m-%d"
+            date:
+                column: date
+                validators:
+                    date_time:
+                        format: "%Y-%m-%d"
+                formatter:
+                    provider: date_time
+                    format: "%Y-%m-%d"
+            cases:
+                column: cases
+                validators:
+                    number:
+                        min: 0
+                        nan: true
+                formatter: integer
+            deaths:
+                column: deaths
+                validators:
+                    number:
+                        min: 0
+                        nan: true
+                formatter: integer
