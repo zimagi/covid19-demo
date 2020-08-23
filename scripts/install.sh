@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 #
-# Install DOI Career related packaging
+# Install Covid-19 tracking related packaging
 #
 set -e
