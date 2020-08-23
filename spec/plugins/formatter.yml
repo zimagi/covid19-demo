@@ -1,0 +1,14 @@
+plugin:
+    formatter:
+        providers:
+            name_joiner:
+                base: joiner
+                option:
+                    date_formatter_provider:
+                        type: char
+                        default: date_time
+                        help: "Date formatter provider for standardizing dates for record names"
+                    date_format:
+                        type: char
+                        default: "%Y%m%d"
+                        help: "Regular expression pattern that date value must match"
