@@ -3,13 +3,10 @@ data:
         class: USStateMeasures
         base: us_state
         mixins: [date, cases, hospitalizations, testing, testing_detail]
-        key: id
         id_fields: [us_state_id, date]
         roles:
             edit: [covid19-admin]
             view: [covid19-auditor]
-        fields:
-            name: null
         meta:
             unique_together: [us_state, date]
             ordering: ["-date"]

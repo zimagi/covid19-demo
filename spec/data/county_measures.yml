@@ -3,13 +3,10 @@ data:
         class: USCountyMeasures
         base: us_county
         mixins: [date, cases_summary]
-        key: id
         id_fields: [us_county_id, date]
         roles:
             edit: [covid19-admin]
             view: [covid19-auditor]
-        fields:
-            name: null
         meta:
             unique_together: [us_county, date]
             ordering: ["-date"]
