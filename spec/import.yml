@@ -39,7 +39,7 @@ import:
                 column: county
                 validators:
                     string:
-                        pattern: "^[A-Za-z\\s]+$"
+                        empty: false
             fips:
                 column: fips
                 validators:
@@ -63,8 +63,8 @@ import:
             name:
                 column: [fips, date]
                 formatter:
-                    provider: joiner
-                    join: "-"
+                    provider: name_joiner
+                    date_format: "%Y%m%d"
             date:
                 column: date
                 validators:
@@ -78,93 +78,131 @@ import:
                 validators:
                     number:
                         min: 0
+                        nan: true
+                formatter: integer
             negative:
                 column: negative
                 validators:
                     number:
                         min: 0
+                        nan: true
+                formatter: integer
             pending:
                 column: pending
                 validators:
                     number:
                         min: 0
+                        nan: true
+                formatter: integer
             recovered:
                 column: recovered
                 validators:
                     number:
                         min: 0
+                        nan: true
+                formatter: integer
             deaths:
                 column: death
                 validators:
                     number:
                         min: 0
+                        nan: true
+                formatter: integer
             hospitalized:
                 column: hospitalized
                 validators:
                     number:
                         min: 0
+                        nan: true
+                formatter: integer
             hospitalized_currently:
                 column: hospitalizedCurrently
                 validators:
                     number:
                         min: 0
+                        nan: true
+                formatter: integer
             hospitalized_cumulative:
                 column: hospitalizedCumulative
                 validators:
                     number:
                         min: 0
+                        nan: true
+                formatter: integer
             icu_currently:
                 column: inIcuCurrently
                 validators:
                     number:
                         min: 0
+                        nan: true
+                formatter: integer
             icu_cumulative:
                 column: inIcuCumulative
                 validators:
                     number:
                         min: 0
+                        nan: true
+                formatter: integer
             ventilator_currently:
                 column: onVentilatorCurrently
                 validators:
                     number:
                         min: 0
+                        nan: true
+                formatter: integer
             ventilator_cumulative:
                 column: onVentilatorCumulative
                 validators:
                     number:
                         min: 0
+                        nan: true
+                formatter: integer
             total_test_results:
                 column: totalTestResults
                 validators:
                     number:
                         min: 0
+                        nan: true
+                formatter: integer
             total_tests_viral:
                 column: totalTestsViral
                 validators:
                     number:
                         min: 0
+                        nan: true
+                formatter: integer
             positive_tests_viral:
                 column: positiveTestsViral
                 validators:
                     number:
                         min: 0
+                        nan: true
+                formatter: integer
             negative_tests_viral:
                 column: negativeTestsViral
                 validators:
                     number:
                         min: 0
+                        nan: true
+                formatter: integer
             positive_cases_viral:
                 column: positiveCasesViral
                 validators:
                     number:
                         min: 0
+                        nan: true
+                formatter: integer
             death_confirmed:
                 column: deathConfirmed
                 validators:
                     number:
                         min: 0
+                        nan: true
+                formatter: integer
             death_probable:
                 column: deathProbable
                 validators:
                     number:
                         min: 0
+                        nan: true
+                formatter: integer
